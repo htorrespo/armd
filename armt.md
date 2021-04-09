@@ -53,13 +53,23 @@ filenames with embedded spaces
 ### Table A-1. Description of Job Pathway Keywords
 
 
-___JOB___. `Optional, Non-repeatable`.  Start of JOB pathway.  This statement is optional if the statements associated with this block appear first in the input control file.
+___JOB___. `Optional, Non-repeatable`.  
 
-___CHK_SYNTAX___. `Optional, Non-repeatable`.  Flag indicating that only the syntax of the input statements should be checked for errors, i.e., no data are processed.
+`Optional, Non-repeatable`: Start of JOB pathway.  This statement is optional if the statements associated with this block appear first in the input control file.
 
-___MESSAGES___. `Mandatory, Non-repeatable`.  Identifies the warning/error messages file.
+___CHK_SYNTAX___. `Optional, Non-repeatable`.  
 
-___REPORT___. `Optional, Non-repeatable`.  Identifies the general report file.
+`Optional, Non-repeatable`: Flag indicating that only the syntax of the input statements should be checked for errors, i.e., no data are processed.
+
+___MESSAGES___. `Mandatory, Non-repeatable`.  
+
+`Mandatory, Non-repeatable`: Identifies the warning/error messages file.
+
+___REPORT___. `Optional, Non-repeatable`.  
+
+`Optional, Non-repeatable`: Identifies the general report file.
+
+
 
 ### Table A-2. Description of Keyword Parameters for the JOB Pathway
 
@@ -74,7 +84,9 @@ ___REPORT___  `summary_filename`: The name of the file where AERMET writes a sum
 
 ### Table A-4. Description of Keyword Parameters for the UPPERAIR Pathway 
 
-___AUDIT___  `uaname1 ... uanameN`:  Name(s) of variables that are to be tracked and reported duringquality assessment (as defined in Table B-1 of Appendix B). 
+___AUDIT___  `uaname1 ... uanameN`  
+
+`uaname1 ... uanameN`: Name(s) of variables that are to be tracked and reported duringquality assessment (as defined in Table B-1 of Appendix B).
 
 ___DATA___  `archive_filename`  `file_format` 
 
@@ -82,8 +94,21 @@ ___DATA___  `archive_filename`  `file_format`
 
 `file_format`: 6201FB (TD-6201 fixed-length blocks), 6201VB (TD-6201 variable-length blocks), FSL for data retrieved from National Centers for Environmental Information (NCEI) web site. Also available online from the National Oceanic and Atmospheric Administration (NOAA) Earth System Research Laboratory (ESRL) Radiosonde Database at https://ruc.noaa.gov/raobs/
 
- 
 NOTE:  The blocking factor and data type (ASCII or EBCDIC) parameters are no longer supported by AERMET, beginning with version 11059.  The default values for these parameters are 1 for blocking factor and ASCII for data type.  AERMET will issue a warning message if these parameters are included on the DATA keyword. 
 
 
+___EXTRACT___ `extracted_data_filename`
 
+`extracted_data_filename`: Name of the output file for data extracted from an archive data file and the name of the input file for upper air data QA
+
+___LOCATION___  `site_id`    `lat(long)`    `long(lat)`    `[tadjust]`
+ 
+`site_id`: Site identifier for which data are to be processed.
+
+`lat(long)`: Station latitude (or longitude) in decimal degrees with the suffix N for sites north of the equator, S for sites south of the equator (or W for sites west of Greenwich, E for sites east of Greenwich).
+
+`long(lat)`: Station longitude (or latitude) in decimal degrees with the suffix W for sites west of Greenwich, E for sites east of Greenwich (or N for sites north of the equator, S for sites south of the equator). 
+
+`[tadjust]`: An integer used to convert the time reported in the database to local Standard time.  For standard upper-air data reported in Greenwich Mean Time (GMT), the value is the same as the time zone for thestation (e.g., a value of 5 for the Eastern time zone).  
+
+NOTE:  Beginning with version 11059, the optional station elevation parameter is no longer supported on the UPPERAIR pathway.
