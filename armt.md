@@ -82,6 +82,32 @@ filenames with embedded spaces
 
 
 
+
+### Table A-3. Description of UPPERAIR Keywords
+
+**UPPERAIR** `Conditional, Non-repeatable` Start of UPPERAIR pathway.
+
+**AUDIT**  `Optional, Repeatable`  Identify variables to be audited.  These are in addition to any automatically audited variables.
+
+**DATA**  `Mandatory, Non-repeatable, Reprocessed`  File name of raw upper air data.
+
+**EXTRACT**   `Mandatory, Non-repeatable`  File name of extracted upper air data. 
+
+**LOCATION**  `Mandatory, Non-repeatable, Reprocessed`  Site ID and location information.  Required only for extractionprocessing.
+
+**MODIFY**   `Optional, Non-repeatable, Reprocessed`   Flag indicating corrections should be made to the sounding data when extracted.  See '5 for a discussion of these corrections 
+
+**NO_MISSING**   `Optional, Repeatable`  Identifies those variables to QA and summarize the messages only; detailed message identifying the violation and date is suppressed 
+
+**QAOUT**   `Mandatory, Non-repeatable`  File name of upper air data for quality assessed output/ merge input
+
+**RANGE**  `Optional, Repeatable, Reprocessed`  Set new upper and lower bounds and missing values for QA of the variable listed
+
+**XDATES**  `Mandatory, Non-repeatable`    Inclusive dates identifying the period of time to extract from the archive data file
+
+
+
+
 ### Table A-4. Description of Keyword Parameters for the UPPERAIR Pathway 
 
 **AUDIT**  `uaname1 ... uanameN`  
