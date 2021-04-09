@@ -78,8 +78,12 @@ ___AUDIT___  `uaname1 ... uanameN`:  Name(s) of variables that are to be tracked
 
 ___DATA___  `archive_filename`  `file_format` 
 
-`archive_filename`:  The name of the file containing the archive of upper air data 
+`archive_filename`:  The name of the file containing the archive of upper air data.
+
 `file_format`: 6201FB (TD-6201 fixed-length blocks), 6201VB (TD-6201 variable-length blocks), FSL for data retrieved from National Centers for Environmental Information (NCEI) web site. Also available online from the National Oceanic and Atmospheric Administration (NOAA) Earth System Research Laboratory (ESRL) Radiosonde Database at https://ruc.noaa.gov/raobs/
 
  
 NOTE:  The blocking factor and data type (ASCII or EBCDIC) parameters are no longer supported by AERMET, beginning with version 11059.  The default values for these parameters are 1 for blocking factor and ASCII for data type.  AERMET will issue a warning message if these parameters are included on the DATA keyword. 
+
+
+
