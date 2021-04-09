@@ -53,7 +53,7 @@ filenames with embedded spaces
 ### Description of Job Pathway Keywords
 
 
-__JOB___. _Optional, Non-repeatable_.  Start of JOB pathway.  This statement is optional if the statements associated with this block appear first in the input control file.
+__JOB___. `Optional, Non-repeatable`.  Start of JOB pathway.  This statement is optional if the statements associated with this block appear first in the input control file.
 
 ___CHK_SYNTAX___. _Optional, Non-repeatable_.  Flag indicating that only the syntax of the input statements should be checked for errors, i.e., no data are processed.
 
