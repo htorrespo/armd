@@ -50,7 +50,7 @@ for filenames has been increased from 48 to 96 and the use of double
 quotes (“) as field delimiters for filenames is allowed to support 
 filenames with embedded spaces
 
-### Description of Job Pathway Keywords
+### Table A-1. Description of Job Pathway Keywords
 
 
 ___JOB___. `Optional, Non-repeatable`.  Start of JOB pathway.  This statement is optional if the statements associated with this block appear first in the input control file.
@@ -60,4 +60,13 @@ ___CHK_SYNTAX___. `Optional, Non-repeatable`.  Flag indicating that only the syn
 ___MESSAGES___. `Mandatory, Non-repeatable`.  Identifies the warning/error messages file.
 
 ___REPORT___. `Optional, Non-repeatable`.  Identifies the general report file.
+
+## Table A-2. Description of Keyword Parameters for the JOB Pathway
+
+___CHK_SYNTAX___ `<none>`
+
+___MESSAGES___  `message_filename`: The name of the file where all source-code-generated messages are written
+
+___REPORT___  `summary_filename`: The name of the file where AERMET writes a summary of all preprocessor activity for the current run
+
 
