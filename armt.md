@@ -61,7 +61,7 @@ ___MESSAGES___. `Mandatory, Non-repeatable`.  Identifies the warning/error messa
 
 ___REPORT___. `Optional, Non-repeatable`.  Identifies the general report file.
 
-## Table A-2. Description of Keyword Parameters for the JOB Pathway
+### Table A-2. Description of Keyword Parameters for the JOB Pathway
 
 ___CHK_SYNTAX___ `<none>`
 
@@ -70,3 +70,14 @@ ___MESSAGES___  `message_filename`: The name of the file where all source-code-g
 ___REPORT___  `summary_filename`: The name of the file where AERMET writes a summary of all preprocessor activity for the current run
 
 
+
+
+### Table A-4. Description of Keyword Parameters for the UPPERAIR Pathway 
+
+___AUDIT___  `uaname1 ... uanameN`:  Name(s) of variables that are to be tracked and reported duringquality assessment (as defined in Table B-1 of Appendix B). 
+
+___DATA___  `archive_filename`:  The name of the file containing the archive of upper air data 
+            `file_format`: 6201FB (TD-6201 fixed-length blocks), 6201VB (TD-6201 variable-length blocks), FSL for data retrieved from National Centers for Environmental Information (NCEI) web site. Also available online from the National Oceanic and Atmospheric Administration (NOAA) Earth System Research Laboratory (ESRL) Radiosonde Database at https://ruc.noaa.gov/raobs/
+
+ 
+NOTE:  The blocking factor and data type (ASCII or EBCDIC) parameters are no longer supported by AERMET, beginning with version 11059.  The default values for these parameters are 1 for blocking factor and ASCII for data type.  AERMET will issue a warning message if these parameters are included on the DATA keyword. 
