@@ -75,9 +75,13 @@ filenames with embedded spaces
 
 **CHK_SYNTAX** `<none>`
 
-**MESSAGES**  `message_filename`: The name of the file where all source-code-generated messages are written
+**MESSAGES**  `message_filename`
 
-**REPORT**  `summary_filename`: The name of the file where AERMET writes a summary of all preprocessor activity for the current run
+`message_filename`: The name of the file where all source-code-generated messages are written
+
+**REPORT**  `summary_filename`
+
+`summary_filename`: The name of the file where AERMET writes a summary of all preprocessor activity for the current run
 
 
 
@@ -138,3 +142,45 @@ NOTE:  The blocking factor and data type (ASCII or EBCDIC) parameters are no lon
 `[tadjust]`: An integer used to convert the time reported in the database to local Standard time.  For standard upper-air data reported in Greenwich Mean Time (GMT), the value is the same as the time zone for thestation (e.g., a value of 5 for the Eastern time zone).  
 
 NOTE:  Beginning with version 11059, the optional station elevation parameter is no longer supported on the UPPERAIR pathway.
+
+**MODIFY**   `<none>`
+
+**NO_MISSING**   `uaname1  ...   uanameN`
+
+`uaname1  ...   uanameN`: Suppresses missing data messages for the upper air variables specified, as defined in Appendix B; the number of times the variable is missing is not tallied
+
+***QAOUT*** `qa_output_filename`
+
+`qa_output_filename`: Name of the output file from the QA/input to merge data
+
+**RANGE** `uaname`  `lower_bound`  `<[=]`  `upper_bound`  `missing_indicator`
+
+`uaname`:  Variable name, as defined in Table B-1 
+
+`lower_bound`:  Minimum value of the valid range of values for uaname
+
+`<[=]`:  Exclude (<) or include (<=) the lower and upper bounds (the endpoints) in the QA 
+
+`upper_bound`:  Maximum value of the valid range of values for uaname
+
+`missing_indicator`:  Value to indicate the value is missing
+
+**XDATES**   `YB/MB/DB`  `[TO]`  `YE/ME/DE`
+
+`YB/MB/DB`:  Beginning year, month and day to extract; the slash (/) between each part of the date field is required; there can be no blanks in this parameter 
+
+`[TO]`:  Optional; used to make this record more readable
+
+`YE/ME/DE`:  Ending year, month and day to extract; the slash (/) between each part of the date field is required; there can be no blanks in this parameter
+
+
+
+
+
+### Table A-5. Description of SURFACE Pathway Keywords
+
+
+
+
+
+
