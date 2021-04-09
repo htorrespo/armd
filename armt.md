@@ -53,19 +53,19 @@ filenames with embedded spaces
 ### Table A-1. Description of Job Pathway Keywords
 
 
-___JOB___. `Optional, Non-repeatable`.  
+**JOB**. `Optional, Non-repeatable`.  
 
 `Optional, Non-repeatable`: Start of JOB pathway.  This statement is optional if the statements associated with this block appear first in the input control file.
 
-___CHK_SYNTAX___. `Optional, Non-repeatable`.  
+**CHK_SYNTAX**. `Optional, Non-repeatable`.  
 
 `Optional, Non-repeatable`: Flag indicating that only the syntax of the input statements should be checked for errors, i.e., no data are processed.
 
-___MESSAGES___. `Mandatory, Non-repeatable`.  
+**MESSAGES**. `Mandatory, Non-repeatable`.  
 
 `Mandatory, Non-repeatable`: Identifies the warning/error messages file.
 
-___REPORT___. `Optional, Non-repeatable`.  
+**REPORT**. `Optional, Non-repeatable`.  
 
 `Optional, Non-repeatable`: Identifies the general report file.
 
@@ -73,22 +73,22 @@ ___REPORT___. `Optional, Non-repeatable`.
 
 ### Table A-2. Description of Keyword Parameters for the JOB Pathway
 
-___CHK_SYNTAX___ `<none>`
+**CHK_SYNTAX** `<none>`
 
-___MESSAGES___  `message_filename`: The name of the file where all source-code-generated messages are written
+**MESSAGES**  `message_filename`: The name of the file where all source-code-generated messages are written
 
-___REPORT___  `summary_filename`: The name of the file where AERMET writes a summary of all preprocessor activity for the current run
+**REPORT**  `summary_filename`: The name of the file where AERMET writes a summary of all preprocessor activity for the current run
 
 
 
 
 ### Table A-4. Description of Keyword Parameters for the UPPERAIR Pathway 
 
-___AUDIT___  `uaname1 ... uanameN`  
+**AUDIT**  `uaname1 ... uanameN`  
 
 `uaname1 ... uanameN`: Name(s) of variables that are to be tracked and reported duringquality assessment (as defined in Table B-1 of Appendix B).
 
-___DATA___  `archive_filename`  `file_format` 
+**DATA**  `archive_filename`  `file_format` 
 
 `archive_filename`:  The name of the file containing the archive of upper air data.
 
@@ -97,11 +97,11 @@ ___DATA___  `archive_filename`  `file_format`
 NOTE:  The blocking factor and data type (ASCII or EBCDIC) parameters are no longer supported by AERMET, beginning with version 11059.  The default values for these parameters are 1 for blocking factor and ASCII for data type.  AERMET will issue a warning message if these parameters are included on the DATA keyword. 
 
 
-___EXTRACT___ `extracted_data_filename`
+**EXTRACT** `extracted_data_filename`
 
 `extracted_data_filename`: Name of the output file for data extracted from an archive data file and the name of the input file for upper air data QA
 
-___LOCATION___  `site_id`    `lat(long)`    `long(lat)`    `[tadjust]`
+**LOCATION**  `site_id`    `lat(long)`    `long(lat)`    `[tadjust]`
  
 `site_id`: Site identifier for which data are to be processed.
 
